@@ -4,7 +4,7 @@
 # Data engineering and ML pipeline that uses image classification and time series analysis to predict traffic flow for Newcastle upon Tyne highway camera footage
 
 
-# This project implements  a pipeline for the Newcastle upon Tyne highway camera footage. The pipeline pulls zip files from the uk's ubranobservatory.ac API, then unzips the files and extracts relevant information from the cctv pictures such as time of day, day of week, number of cars. The project uses a finetuned version of YOLO-m to recognize car's which was trained on a set of hand labelled images from the cctv footages. The extracted informations are then output to a single csv file for all pictures of the given month, which is then fed to the the pyspark module, where it gets converted into a spark vector set and is the training set for the pyspark random forest regressor to better understand the dynamics and patters of the Newcastle upon Tyne traffic network.
+## This project implements  a pipeline for the Newcastle upon Tyne highway camera footage. The pipeline pulls zip files from the uk's ubranobservatory.ac API, then unzips the files and extracts relevant information from the cctv pictures such as time of day, day of week, number of cars. The project uses a finetuned version of YOLO-m to recognize car's which was trained on a set of hand labelled images from the cctv footages. The extracted informations are then output to a single csv file for all pictures of the given month, which is then fed to the the pyspark module, where it gets converted into a spark vector set and is the training set for the pyspark random forest regressor to better understand the dynamics and patters of the Newcastle upon Tyne traffic network.
 
 
 
@@ -24,6 +24,7 @@
 - regression_learner.py: this script assembles the vector dataframe from the traffic.csv for Pyspark RandomForestRegression ingestion, then trains and tests the model to predict the number of cars based on time series analysis 
 - orchestrator.py: this script automates the whole pipeline and runs it using if __name__ == '__main__':
  
+
 
 
 
