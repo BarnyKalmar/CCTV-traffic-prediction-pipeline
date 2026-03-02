@@ -1,0 +1,8 @@
+path: C:/Users/Barnabsa/London_CCTV_Proj/hand_labeled_data
+
+train: training_set/images
+val: validation_set/images
+test: test_set/images
+
+names:
+  0: car
